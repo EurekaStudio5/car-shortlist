@@ -1,0 +1,43 @@
+name: expire
+
+on:
+  schedule:
+    - cron: '7 0 * * *'
+    - cron: '7 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  expire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Take the page down after the deadline
+        run: |
+          DEADLINE="2026-09-27"
+          TODAY=$(date -u +%F)
+          echo "today=$TODAY deadline=$DEADLINE"
+          if [[ "$TODAY" < "$DEADLINE" ]]; then
+            echo "Still within the publication window. Nothing to do."
+            exit 0
+          fi
+          shopt -s nullglob
+          removed=0
+          for d in */ ; do
+            case "$d" in .git/|.github/) continue ;; esac
+            git rm -rq "$d" && removed=1
+          done
+          [ -f index.html ] && git rm -qf index.html && removed=1
+          [ -f robots.txt ] && git rm -qf robots.txt && removed=1
+          if [ "$removed" = "0" ]; then
+            echo "Already taken down."
+            exit 0
+          fi
+          printf '%s\n' "This page has expired." > index.html
+          git add index.html
+          git config user.name "expire-bot"
+          git config user.email "actions@github.com"
+          git commit -qm "Take the page down (published window ended $DEADLINE)"
+          git push
