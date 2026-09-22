@@ -47,6 +47,13 @@ h3{font-size:16px;margin:26px 0 10px;padding-left:9px;border-left:4px solid #1a4
  padding:6px 9px;width:25%;border:1px solid #e6e8eb;white-space:nowrap}
 .sp td{padding:6px 9px;border:1px solid #e6e8eb;font-weight:600}
 .pk{font-weight:400;color:#5c636e;font-size:12px}
+.rv{display:inline-block;margin-left:7px;font-size:12px;font-weight:700;color:#8a5209;
+ background:#fdf2e0;border-radius:3px;padding:1px 7px;white-space:nowrap}
+.rv em{font-style:normal;font-weight:400;font-size:11px}
+.rv-hi{color:#155e3f;background:#e3f2ea}
+.rv-lo{color:#8f2f1c;background:#fbe4de}
+.rv-none{color:#6b7280;background:#eceef1}
+.sp td small{display:block;font-size:11px;font-weight:400;color:#8b919b;margin-top:1px}
 td.gn{color:#1a4f8a}
 td.ok{color:#1f6f4a}
 td.ng{color:#a8452c}
@@ -91,6 +98,11 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
 .tl li b{display:block;font-size:14px;line-height:1.5}
 .kt{color:#b06a12}
 .tl li p{margin:2px 0 0;font-size:12.5px;color:#4a5158}
+.mini{width:100%;border-collapse:collapse;font-size:13px;margin:9px 0 0}
+.mini th{background:#f7f8f9;color:#5c636e;font-weight:500;text-align:left;
+ padding:5px 9px;width:38%;border:1px solid #e6e8eb;white-space:nowrap}
+.mini td{padding:5px 9px;border:1px solid #e6e8eb}
+.mini td.rl{background:#fff8ec;color:#8a5209}
 .note{margin-top:24px;padding-top:15px;border-top:1px solid #dcdfe4;font-size:12px;color:#5c636e}
 .note b{color:#1a1d22}
 .note p{margin:0 0 7px}
@@ -113,7 +125,8 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
 <section id="p1" role="tabpanel" aria-labelledby="t1">
 <div class="box">
 <h2>価格優先 ── 支払総額50万円以内 × 走行8万km以内</h2>
-<p>価格と走行距離は数字ではっきり分かる条件なので、まずこの2つを満たしました（修復歴なしも必須）。該当したのは全国9台で、<b>並び順は「支払総額＋引き取り費」の安い順</b>です。<br><b>1位は実質38.2万円（長野・2007年・5.5万km）、2位は38.6万円（埼玉・2009年・6.9万km・保証付）で、差はわずか4千円。</b><br><b>実質45万円以内に収まるのは上位4台</b>で、そこに区切り線を入れています。</p><p style="margin-top:8px"><b>考え方</b>／1位と、状態優先タブの1位（58.1万円）の差は約20万円あります。状態の良さは壊れる確率を下げますが、ゼロにはしません。一方<b>価格差は確実に手元に残ります</b>。20万円あれば、万一の修理も、極端な話もう1台買い直すことも視野に入る——という判断で、このタブを先頭に置いています。</p>
+<p>価格と走行距離は数字ではっきり分かる条件なので、まずこの2つを満たしました（修復歴なしも必須）。該当したのは全国9台で、<b>並び順は「支払総額＋引き取り費」の安い順</b>です。<br><b>1位は実質38.2万円（長野・2007年・5.5万km）、2位は38.6万円（埼玉・2009年・6.9万km・保証付）で、差はわずか4千円。</b><br><b>実質45万円以内に収まるのは上位4台</b>で、そこに区切り線を入れています。</p>
+<p style="margin-top:8px"><b>販売店の評価も入れました。</b>カーセンサーの店舗クチコミ（5点満点・投稿数つき）です。ここを見ると、<b>実質45万円以内の4台のうち、1位（長野）と3位（千葉）はクチコミが1件も付いていない店</b>で、逆に<b>4位（茨城・4.7点205件）と、ラインのすぐ外にいる5位（千葉・4.9点352件）は実績が厚い</b>という差が出ます。1位と4位の価格差は5.8万円。<b>その5.8万円で「何百件も取引を見てきた店から買う」という安心を買うかどうか</b>が、このタブの実質的な分かれ目です。</p><p style="margin-top:8px"><b>考え方</b>／1位と、状態優先タブの1位（58.1万円）の差は約20万円あります。状態の良さは壊れる確率を下げますが、ゼロにはしません。一方<b>価格差は確実に手元に残ります</b>。20万円あれば、万一の修理も、極端な話もう1台買い直すことも視野に入る——という判断で、このタブを先頭に置いています。</p>
 </div>
 
 <article class="c">
@@ -124,7 +137,8 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>走行</th><td>5.5万km</td><th>車検</th><td>2028年4月まで</td></tr>
   <tr><th>保証</th><td class="ng">保証なし</td><th>法定整備</th><td class="ng">法定整備なし</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="no">－</td></tr>
-  <tr><th>所在地</th><td colspan="3">長野県塩尻市<span class="pk">（引き取り約1.4万円）</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">38.2<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
+  <tr><th>所在地</th><td colspan="3">長野県塩尻市<span class="pk">（引き取り約1.4万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">アクロスオート 塩尻店<span class="rv rv-none">クチコミなし</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">38.2<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
  </table>
  <p class="g"><b>9台で最安、そして実質コストでも最安の38.2万円。</b>走行5.5万kmは9台で最少タイ。車検も2028年4月まで約1年7ヶ月残る。左右パワーシート・ETC・MTモード付き。<b>とにかく安く済ませるならこれ。</b></p>
  <p class="b"><b>保証なし・法定整備なしの現状販売。</b>長野なので引き取り1.4万円。</p>
@@ -138,7 +152,8 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>走行</th><td>6.9万km</td><th>車検</th><td>2028年7月まで</td></tr>
   <tr><th>保証</th><td class="ok">保証付</td><th>法定整備</th><td class="ng">法定整備なし</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="no">－</td></tr>
-  <tr><th>所在地</th><td colspan="3">埼玉県さいたま市見沼区<span class="pk">（引き取り約0.6万円）</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">38.6<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
+  <tr><th>所在地</th><td colspan="3">埼玉県さいたま市見沼区<span class="pk">（引き取り約0.6万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">ＳｍａｌｌＲｉｖｅｒ<span class="rv ">★4.8<em>（12件）</em></span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">38.6<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
  </table>
  <p class="g"><b>実質2位。1位との差はわずか4千円。</b>2009年式と比較的新しく、走行6.9万km、<b>この9台で数少ない保証付き</b>。車検も2028年7月まで約1年10ヶ月残る。埼玉なので引き取り0.6万円で日帰り。<b>4千円の差で保証が付くなら、ここが実質の本命。</b></p>
  <p class="b">法定整備が付かないので、納車前整備は別途交渉が必要。</p>
@@ -152,7 +167,8 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>走行</th><td>8.0万km</td><th>車検</th><td>2027年10月まで</td></tr>
   <tr><th>保証</th><td class="ng">保証なし</td><th>法定整備</th><td class="ok">法定整備付</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="no">－</td></tr>
-  <tr><th>所在地</th><td colspan="3">千葉県野田市<span class="pk">（引き取り約0.7万円）</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">39.6<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
+  <tr><th>所在地</th><td colspan="3">千葉県野田市<span class="pk">（引き取り約0.7万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">タウロスジャパン野田店<span class="rv rv-none">クチコミなし</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">39.6<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
  </table>
  <p class="g"><b>9台で最も新しい2010年式（唯一の2代目）で、実質39.6万円。</b>法定整備が付き、千葉なので引き取り0.7万円。年式の新しさを1万円強で買えると考えれば安い。2代目なのでガソリンがレギュラーで済むのもここだけ。</p>
  <p class="b">走行8.0万kmは条件の上限ちょうど。保証なし。</p>
@@ -166,7 +182,8 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>走行</th><td>5.5万km</td><th>車検</th><td>2027年6月まで</td></tr>
   <tr><th>保証</th><td class="ng">保証なし</td><th>法定整備</th><td class="ok">法定整備付</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="no">－</td></tr>
-  <tr><th>所在地</th><td colspan="3">茨城県龍ケ崎市<span class="pk">（引き取り約1.0万円）</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">44.0<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
+  <tr><th>所在地</th><td colspan="3">茨城県龍ケ崎市<span class="pk">（引き取り約1.0万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">日巨株式会社ＮＫ－１普通自動車専門店<span class="rv rv-hi">★4.7<em>（205件）</em></span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">44.0<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
  </table>
  <p class="g">走行5.5万kmは1位と並んで最少。法定整備が付き、茨城なので引き取りも1.0万円と安い。プライムセレクション（初代前期だけの特別仕様）。</p>
  <p class="b">2006年式で20年落ち。<b>9台で唯一の初代前期</b>ではなく3台あるが、いずれも最も古い世代。保証なし。</p>
@@ -180,7 +197,8 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>走行</th><td>6.7万km</td><th>車検</th><td>車検整備なし</td></tr>
   <tr><th>保証</th><td class="ng">保証なし</td><th>法定整備</th><td class="ng">法定整備なし</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="no">－</td></tr>
-  <tr><th>所在地</th><td colspan="3">千葉県野田市<span class="pk">（引き取り約0.7万円）</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">45.5<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
+  <tr><th>所在地</th><td colspan="3">千葉県野田市<span class="pk">（引き取り約0.7万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">ＥＬ－Ｒｅｃａｒｓエル・レカーズ<span class="rv rv-hi">★4.9<em>（352件）</em></span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">45.5<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
  </table>
  <p class="g">2008年式・6.7万kmで44.8万円。千葉なので引き取り0.7万円、実質45.5万円。店の規模は大きい（クチコミ352件）。</p>
  <p class="b"><b>「車検整備なし」の意味に注意。</b>車検の取得自体は購入時に行われ、重量税・自賠責などの法定費用は44.8万円に含まれる。ただし<b>法定24ヶ月点検整備は実施されない</b>ので、納車後に別途受ける必要がある（費用は未確認）。保証も記録簿もなし。</p>
@@ -194,7 +212,8 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>走行</th><td>7.7万km</td><th>車検</th><td>車検2年付き</td></tr>
   <tr><th>保証</th><td class="ng">保証なし</td><th>法定整備</th><td class="ok">法定整備付</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="no">－</td></tr>
-  <tr><th>所在地</th><td colspan="3">北海道釧路市<span class="pk">（引き取り約8.0万円）</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">46.0<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
+  <tr><th>所在地</th><td colspan="3">北海道釧路市<span class="pk">（引き取り約8.0万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">コミッカーＦ＆ｏｎｅ<span class="rv rv-none">クチコミなし</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">46.0<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
  </table>
  <p class="g">38.0万円で車検2年・法定整備付き。このタブでは唯一の4WD（250G Four ヴェルティガ／型式はGRX125）で、群馬の冬には有利（状態優先タブの4位も4WD）。</p>
  <p class="b"><b>北海道釧路。引き取りに8万円前後かかり、実質46万円。</b>融雪剤による下回りの錆も要確認。</p>
@@ -208,7 +227,8 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>走行</th><td>7.7万km</td><th>車検</th><td>2027年7月まで</td></tr>
   <tr><th>保証</th><td class="ng">保証なし</td><th>法定整備</th><td class="ng">法定整備なし</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="ok">◯</td></tr>
-  <tr><th>所在地</th><td colspan="3">埼玉県三郷市<span class="pk">（引き取り約0.7万円）</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">47.5<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
+  <tr><th>所在地</th><td colspan="3">埼玉県三郷市<span class="pk">（引き取り約0.7万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">ＦＬＯＡＴ（フロート）<span class="rv ">★5.0<em>（23件）</em></span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">47.5<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
  </table>
  <p class="g"><b>この9台のうち、掲載の「定期点検記録簿」欄が◯なのは2台だけ。そのうち近い方（埼玉三郷）。</b>引き取り0.7万円。2006年式だが、カーセンサーの型の紐付けでは後期（2006年10月以降）。</p>
  <p class="b">保証なし・法定整備なし。</p>
@@ -222,7 +242,8 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>走行</th><td>6.0万km</td><th>車検</th><td>車検2年付き</td></tr>
   <tr><th>保証</th><td class="ng">保証なし</td><th>法定整備</th><td class="ok">法定整備付</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="no">－</td></tr>
-  <tr><th>所在地</th><td colspan="3">神奈川県横浜市旭区<span class="pk">（引き取り約1.1万円）</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">48.9<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
+  <tr><th>所在地</th><td colspan="3">神奈川県横浜市旭区<span class="pk">（引き取り約1.1万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">株式会社ＦｕｌｌＳｐｅｅｄ<span class="rv rv-hi">★5.0<em>（57件）</em></span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">48.9<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
  </table>
  <p class="g">走行6.0万kmと少なめで、車検2年と法定整備が付く。</p>
  <p class="b">2005年式で21年落ち。9台で最も古い。</p>
@@ -236,7 +257,8 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>走行</th><td>7.7万km</td><th>車検</th><td>車検2年付き</td></tr>
   <tr><th>保証</th><td class="ok">保証付</td><th>法定整備</th><td class="ok">法定整備付</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="ok">◯</td></tr>
-  <tr><th>所在地</th><td colspan="3">兵庫県明石市<span class="pk">（引き取り約3.9万円）</span></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">53.8<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
+  <tr><th>所在地</th><td colspan="3">兵庫県明石市<span class="pk">（引き取り約3.9万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">株式会社ワイズライン<span class="rv ">★4.2<em>（8件）</em></span><small>件数が少なめ</small></td></tr><tr><th>実質コスト</th><td colspan="3" class="rl">53.8<small>万円</small><span class="pk">＝支払総額＋引き取り費</span></td></tr>
  </table>
  <p class="g">記録簿・保証・法定整備・車検2年がすべて付き、<b>中身は9台で最も良い</b>。<b>状態優先タブの1位と同じ4条件を、掲載価格では8.2万円安く満たしています。</b></p>
  <p class="b"><b>兵庫なので引き取り3.9万円で実質53.8万円。9台で最も高い。</b>1位との差は15.6万円。その差に見合うかは、記録簿と保証をどれだけ重く見るか次第。</p>
@@ -261,6 +283,7 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>保証</th><td class="ok">保証付</td><th>法定整備</th><td class="ok">法定整備付</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="ok">◯</td></tr>
   <tr><th>所在地</th><td colspan="3">埼玉県ふじみ野市<span class="pk">（引き取り約0.8万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">カーベルふじみ野店<span class="rv rv-hi">★4.8<em>（156件）</em></span></td></tr>
  </table>
  <p class="g"><b>整備記録簿・保証・法定整備・車検2年が全部そろって58.1万円。</b>同じ4条件は価格優先タブの9位（兵庫・49.9万円）も満たしますが、あちらは2006年式・7.7万km・引き取り3.9万円。<b>こちらは2009年式・6.5万kmで、埼玉なので日帰りで引き取れます。</b>実質コストで比べると53.8万円対58.9万円の5.1万円差で、その差で3年分新しく走行1.2万km少ない個体を買う、という関係です。</p>
  <p class="b">カーセンサーの「ワンオーナー」欄は「－」で、記載がありません（下の注記参照）。価格優先タブの1位より20万円高い。</p>
@@ -275,6 +298,7 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>保証</th><td class="ok">保証付</td><th>法定整備</th><td class="ok">法定整備付</td></tr>
   <tr><th>1オーナー</th><td class="ok">ワンオーナー</td><th>整備記録簿</th><td class="ok">◯</td></tr>
   <tr><th>所在地</th><td colspan="3">愛知県<span class="pk">（引き取り約2.6万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">ガリバー 津島店<span class="rv rv-hi">★4.9<em>（88件）</em></span></td></tr>
  </table>
  <p class="g"><b>ワンオーナー＋整備記録簿＋保証＋法定整備の4条件がすべて揃う。</b>走行4.7万kmと少なく、禁煙車で第三者機関の品質評価書も付く。同じ4条件を満たすのは6位との2台だけで、安いのはこちら。</p>
  <p class="b">愛知なので引き取り2.6万円。実質67.4万円。</p>
@@ -289,6 +313,7 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>保証</th><td class="ng">保証なし</td><th>法定整備</th><td class="ng">法定整備なし</td></tr>
   <tr><th>1オーナー</th><td class="ok">ワンオーナー</td><th>整備記録簿</th><td class="ok">◯</td></tr>
   <tr><th>所在地</th><td colspan="3">群馬県<span class="pk">（引き取り約0.2万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">カートラスト夢和<span class="rv ">★4.7<em>（9件）</em></span><small>件数が少なめ</small></td></tr>
  </table>
  <p class="g"><b>群馬県。引き取り0.2万円で、現車確認も試乗も即日できる。</b>唯一のSパッケージ（専用エアロ・専用サスのスポーツ仕様）で、Advoxの車高調まで入っている。見た目は一番だと思う（ここは主観）。</p>
  <p class="b"><b>保証なし・法定整備なし</b>の現状販売。走行9.5万kmで8万km条件も超える。整備費は見積もりを取っていません。10〜15万円というのは仮に置いた予備費です。</p>
@@ -303,6 +328,7 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>保証</th><td class="ok">保証付</td><th>法定整備</th><td class="ok">法定整備付</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="ok">◯</td></tr>
   <tr><th>所在地</th><td colspan="3">新潟県<span class="pk">（引き取り約1.5万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">ガリバー ８号燕三条店<span class="rv ">★4.6<em>（37件）</em></span></td></tr>
  </table>
  <p class="g">2011年式でこの中では新しい方。記録簿・保証・法定整備・車検2年が付いて59.8万円。4WD（250G Four Fパッケージ／型式はGRX135）。</p>
  <p class="b">走行9.8万kmで10万km目前。8万km条件を超える。</p>
@@ -317,6 +343,7 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>保証</th><td class="ok">保証付</td><th>法定整備</th><td class="ng">法定整備なし</td></tr>
   <tr><th>1オーナー</th><td class="ok">ワンオーナー</td><th>整備記録簿</th><td class="ok">◯</td></tr>
   <tr><th>所在地</th><td colspan="3">埼玉県<span class="pk">（引き取り約0.8万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">ＭＩＨトレーディング<span class="rv ">★4.8<em>（21件）</em></span></td></tr>
  </table>
  <p class="g">ワンオーナー＋記録簿＋保証付。走行3.8万kmは、掲載中の15台では最も少ない。埼玉で引き取りも安い。</p>
  <p class="b"><b>法定整備が付かない</b>のに74.9万円と高い。</p>
@@ -331,6 +358,7 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>保証</th><td class="ok">保証付</td><th>法定整備</th><td class="ok">法定整備付</td></tr>
   <tr><th>1オーナー</th><td class="ok">ワンオーナー</td><th>整備記録簿</th><td class="ok">◯</td></tr>
   <tr><th>所在地</th><td colspan="3">神奈川県<span class="pk">（引き取り約1.0万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">ＣＡＲＨＩＳＴＯＲＹ（カーヒストリー）<span class="rv ">★5.0<em>（20件）</em></span></td></tr>
  </table>
  <p class="g">ワンオーナー・記録簿・保証・法定整備が全部付き、認証工場で法定24ヶ月点検を実施してから納車される。リラックスセレクション ブラックリミテッドという特別仕様。</p>
  <p class="b"><b>86.6万円。このタブの6台はそもそも全部が50万円を超える参考掲載ですが、その中でも検索上限（本体80万円）を超えたのはこの1台だけです。</b>4条件が揃うのは2位と並んで貴重だが、2位とは21.8万円差。</p>
@@ -345,6 +373,7 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
   <tr><th>保証</th><td class="ok">保証付</td><th>法定整備</th><td class="ok">法定整備付</td></tr>
   <tr><th>1オーナー</th><td class="no">－</td><th>整備記録簿</th><td class="ok">◯</td></tr>
   <tr><th>所在地</th><td colspan="3">栃木県<span class="pk">（引き取り約0.8万円）</span></td></tr>
+  <tr><th>販売店</th><td colspan="3">ネッツトヨタ栃木 日光森友店<span class="rv rv-lo">★2.5<em>（2件）</em></span><small>件数が少なめ</small></td></tr>
  </table>
  <p class="g">走行約1.2万kmという極端な低走行車で、前回（9月20日）は状態優先の3位に置いていました。<b>9月22日に再確認したところ、カーセンサーの掲載が終了していました。</b>売れたか、店が取り下げたかのどちらかです。</p>
  <p class="b"><b>掲載が終了しているため、いま買えるかどうかは未確認です</b>（売却済みか、店が取り下げたかまでは分かりません）。候補からは外し、前回見たときの記録として残しています。</p>
@@ -417,10 +446,32 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
 <ol class="tl"><li class="a"><span class="ym">2004.11</span><div><b>初代デビュー</b><p>マークIIから名前を変えて登場。型式GRX120系。2.5L V6（215ps・ハイオク）と3.0L V6（256ps）を積むFRセダン。</p></div></li><li class="a"><span class="ym">2006.10</span><div><b>初代マイナーチェンジ ＝ <span class="kt">後期</span>へ</b><p>フロントグリル、バンパー、前後ランプのデザインを変更。サスペンションの調整と制振材の追加で、乗り心地と静粛性が上がった。</p></div></li><li class="x"><span class="ym">2009.09</span><div><b>初代 生産終了</b></div></li><li class="b"><span class="ym">2009.10</span><div><b>2代目デビュー</b><p>型式GRX130系。<b>2.5Lがレギュラーガソリン仕様になり</b>、出力は215→203psに。3.5L V6（318ps）も設定。全車6AT。</p></div></li><li class="b"><span class="ym">2012.08</span><div><b>2代目マイナーチェンジ ＝ <span class="kt">中期</span>へ</b><p>前後バンパー・灯火類・室内の意匠を変更。トヨタ自身が内外装とサスを専用チューニングしたスポーツ版「G’s（ジーズ）」が加わった。</p></div></li><li class="b"><span class="ym">2014.09</span><div><b>一部改良</b><p>最上級のPREMIUMに内装色を追加。250Gでもインテリジェントパーキングアシストが選べるようになった。</p></div></li><li class="b"><span class="ym">2016.11</span><div><b>2代目ビッグマイナーチェンジ ＝ <span class="kt">後期</span>へ</b><p>フロントフェイスを刷新し、全長が4,750→4,770mmに延長。<b>衝突回避支援「トヨタセーフティセンスP」が全車標準装備</b>になった。</p></div></li><li class="b"><span class="ym">2017.09</span><div><b>G’s廃止 → GR SPORT</b><p>スポーツ仕様の呼び名がGR SPORTに変わる。3.5Lには最終的にGRMNも設定された。</p></div></li><li class="x"><span class="ym">2019.12</span><div><b>生産終了</b><p>後継車はなく、マークII時代から続いたこの系譜はここで終わりました。</p></div></li></ol>
 
 <h3>型による実費の違い（今回の候補に関係するところ）</h3>
-<div class="box">
-<h2>ガソリン（2.5Lの場合） ── 初代はハイオク、2代目はレギュラー</h2>
-<p>初代の2.5L（215ps）は<b>ハイオク指定</b>で、2代目の2.5L（203ps）は<b>レギュラー</b>です。出力を12ps落としてレギュラー対応にしたのが2代目の変更点のひとつでした。<br>
-ただし<b>真五さんの使い方（年500km前後）では、この差は年500円ほど</b>にしかなりません。実燃費を10km/L、ハイオクとレギュラーの単価差を10円/Lと置くと、500km÷10km/L×10円＝500円という計算です（実際の単価差と実燃費で上下します）。型を選ぶ理由にはならない、というのが正直なところです。</p>
+<div class="box warn">
+<h2>ガソリン ── 初代はハイオク、2代目はレギュラー。年6,800円ちがう</h2>
+<p>初代の2.5L（215ps）は<b>ハイオク指定</b>、2代目の2.5L（203ps）は<b>レギュラー</b>です。出力を12ps落としてレギュラー対応にしたのが2代目の変更点のひとつでした。<br>
+走行を<b>月500km＝年6,000km</b>、実燃費を<b>9.6km/L</b>とすると、使うガソリンは<b>年625リットル</b>。2026年9月14日調査の全国平均（レギュラー169.9円／ハイオク180.8円）で計算すると──</p>
+<table class="mini">
+<tr><th>2代目（レギュラー）</th><td>625L × 169.9円 ＝ <b>年 約10.6万円</b></td></tr>
+<tr><th>初代（ハイオク）</th><td>625L × 180.8円 ＝ <b>年 約11.3万円</b></td></tr>
+<tr><th>差</th><td class="rl">年 <b>約6,800円</b>（10.9円/L × 625L）</td></tr>
+</table>
+<p><b>買った値段の差は、2年ほどで消えます。</b>価格優先1位（長野・初代・実質38.2万円）と3位（千葉・2代目・実質39.6万円）の差は1.4万円。ガソリン代の差が年6,800円なので、<b>購入費とガソリン代だけを比べるなら約2.1年で並び、5年では3位のほうが約2万円安くなります。</b><br>
+ただしこれは燃料費だけの話で、<b>どちらが最終的に安いかは決まりません</b>——修理や消耗品、県外登録の費用は入っていないからです。とはいえ他の条件を見ても、この2台は<b>保証はどちらも無し</b>、<b>法定整備は3位だけ付く</b>、車検の残りは1位が2028年4月・3位が2027年10月で半年ぶん1位が長い、という関係なので、<b>「1位のほうが1.4万円安い」という一点だけで決めるのは危ないということです。</b></p>
+<p style="margin-top:6px"><b>前提</b>／実燃費9.6km/Lは、e燃費に出ている2代目250Gの実測（9.5km/L前後）を参考に、<b>初代・2代目とも同じ値と仮定</b>して比較したものです。初代はハイオク指定で圧縮比も違うため実際は差が出ます。燃料価格と燃費が今のまま変わらない場合の計算です。</p>
+</div>
+<div class="box blue">
+<h2>年間の維持費 ── ガソリン代がいちばん大きい</h2>
+<p>月500km（年6,000km）で走ると、ざっと次のようになります。<b>重量税は「13年超・18年未満」の額を年割りしたもの</b>で、任意保険と整備・消耗品は含みません。</p>
+<table class="mini">
+<tr><th>ガソリン</th><td><b>約10.6万円</b>（2代目・レギュラー。初代なら約11.3万円）</td></tr>
+<tr><th>自動車税</th><td>51,700円（13年超の重課）</td></tr>
+<tr><th>重量税</th><td>22,800円（車検2年ぶん45,600円の半分）</td></tr>
+<tr><th>自賠責</th><td>8,825円（24ヶ月17,650円の半分）</td></tr>
+<tr><th>合計</th><td class="rl"><b>年 約19万円</b></td></tr>
+</table>
+<p>⚠️<b>自賠責は2026年11月1日を始期とする契約から値上がりします</b>（24ヶ月 17,650円→18,560円。13年ぶりの改定で全車種平均6.2%増）。11月以降に車検を取る形で買うなら、年換算は8,825円ではなく<b>9,280円</b>になります（年455円増）。</p>
+<p><b>税金と自賠責を全部足した8.3万円より、ガソリン代10.6万円のほうが大きい</b>のがこの使い方の特徴です。だから型を選ぶとき、ハイオクかレギュラーかは無視できません（上の節）。<br>
+なお<b>年6,000km走ると5年で3万km増えます。</b>走行8万kmの個体を買うと5年後には11万km。乗り潰すなら問題ありませんが、途中で売るつもりなら「10万km」の大台をまたぐ点は頭に入れておいてください。</p>
 </div>
 <div class="box">
 <h2>重量税 ── どの型でも同じ区分、ただし18年超で少し上がる</h2>
@@ -437,6 +488,7 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
 
 <div class="note">
 <p><b>型の判定について</b>／各車がどの型かは、年式ではなく<b>カーセンサーがその物件に紐づけているカタログの型</b>で判定しています（2006年式と2009年式はマイナーチェンジ／フルモデルチェンジをまたぐため、年だけでは決まらないからです）。掲載終了の1台だけは紐付けが取れないため「初代」までの記載にとどめています。</p>
+<p><b>販売店の評価の読み方</b>／点数はカーセンサーの店舗クチコミ（5点満点）で、カッコ内は投稿数です。<b>点数より投稿数のほうが効きます</b>——5.0点でも投稿8件なら「たまたま良かった8人」かもしれませんが、4.9点で352件なら傾向として信用できます。そこで<b>4.5点以上かつ50件以上のものだけ緑</b>にし、<b>4.0点未満は赤</b>、<b>投稿1〜9件には「件数が少なめ」</b>、<b>0件は「クチコミなし」</b>と出しています。<b>「クチコミなし」は悪い店という意味ではありません</b>（開設が新しい、掲載を始めたばかりなど）。ただし<b>事前に人柄や対応を知る手がかりがない</b>ということなので、遠方なら電話で話してから動くことをおすすめします。投稿できるのは<b>その販売店で中古車を購入した人</b>で、購入のときにカーセンサーを使ったかどうかは問われません。つまり投稿数は、その店で買った人がどれだけ評価を残したかの目安になります。</p>
 <p><b>整備記録簿について</b>／カーセンサーの定型欄で分かるのは「有無」だけです。何年分・何枚残っているかは定型欄には出ず、店舗のコメント欄に書かれている場合にのみ分かります。今回確認した範囲では、どの車にも枚数・対象年の記載はありませんでした。<b>購入前に必ず販売店へ問い合わせが必要です。</b></p>
 <p><b>「定期点検記録簿」欄について</b>／表の◯は、カーセンサーの定型欄で「あり」と申告されているという意味です。<b>「－」は記録簿が存在しないことの証明ではありません</b>（申告していないだけの場合があります）。また、納車整備の記録簿を新たに渡す店もあります。いずれも問い合わせが必要です。</p>
 <p><b>引き取り費</b>／群馬県高崎市を起点に、行きを公共交通・帰りを自走として計算した概算です。</p>
@@ -445,6 +497,7 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
 <p><b>相場の数字について</b>／「初代38.5万円・2代目136.9万円」「2代目738台」「本体55万円未満は67台」は、カーセンサーの中古車相場ページ（マークX）を2026年9月22日に開いて読み取った全国の掲載値です。同サイトの掲載分だけを母数にした数字で、他社サイトや業者在庫は含みません。型カードの「今回の候補には0台」も、今回の検索条件（支払総額50万円以内／走行8万km以内／修復歴なし、および状態優先の本体80万円以下）での結果という意味で、その型の車が全国に無いという意味ではありません。</p>
 <p><b>出典</b>／型の区切り・型式・エンジン出力・指定燃料はカーセンサーの車種カタログ（初代＝2004年11月〜2009年9月／2代目＝2009年10月〜2019年12月）、各マイナーチェンジの内容はトヨタのニュースリリース、車両重量と全長・全幅はトヨタの主要諸元表によります。いずれも2026年9月22日に参照しました。<b>寸法はカーセンサーのカタログだと「1.78m」のようにメートルで丸められている</b>ため、ミリ単位の値はトヨタの諸元の方を採っています。</p>
 <p><b>検証</b>／このページの数値は公開前に別AI（OpenAI Codex）へWeb検索つきで照合させています。2026年9月22日の照合で指摘され、修正したのは次の点です。<b>全幅を1,780→1,800mmと書いていたのを実寸の1,775→1,795mmに訂正</b>、<b>状態優先1位を「この条件でこの価格は他にない」と書いていたが、価格優先9位が同じ4条件をより安く満たすため訂正</b>、価格優先4位の「2位と並んで最少」を「1位と並んで最少」に訂正、マイナーチェンジの回数を2回→3回に訂正、4WDの車両重量を世代別に分離、重量税の18年超の境界日について断定を取り下げ、2019年の生産終了を「トヨタのV6・FRセダンの終わり」と書いていた誇張を撤回。以前の照合で修正したのは、世代の記載・条件を満たす台数の断定・自動車税額・車検費用の二重計上です。</p>
+<p><b>検証（2回目・販売店の評価とガソリン代を足したあと）</b>／<b>クチコミの投稿資格を「カーセンサー経由で買った人だけ」と書いていたのは誤りで、購入時にカーセンサーを使ったかは問われません</b>——訂正しました。ほかに、実燃費の達成率の計算違い（73%→そもそも記載をやめました）、ガソリン価格の調査日の明記、自賠責の2026年11月改定の追記、色分けの基準の明記、そして<b>「順位がひっくり返る」という書き方が強すぎた点</b>（燃料費だけの比較であって総費用の優劣は決まらない）を直しています。ガソリン代の計算そのもの（年625L・約10.6万円／11.3万円・差6,800円）、維持費の合計、販売店16件の点数と投稿数、走行距離の前提変更は、いずれも照合で問題なしでした。</p>
 </div>
 
 </div>
