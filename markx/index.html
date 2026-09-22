@@ -35,8 +35,8 @@ h3{font-size:16px;margin:26px 0 10px;padding-left:9px;border-left:4px solid #1a4
 .rk{display:flex;align-items:baseline;gap:10px;padding:10px 14px;background:#eceef1;
  border-bottom:1px solid #dcdfe4}
 .n{font-size:19px;font-weight:700;color:#b06a12}
-.n::before{content:"\7b2c";font-size:11px;font-weight:400}
-.n::after{content:"\4f4d";font-size:11px;font-weight:400}
+.n::before{content:"第";font-size:11px;font-weight:400}
+.n::after{content:"位";font-size:11px;font-weight:400}
 .soldb{font-size:12px;font-weight:700;color:#fff;background:#6b7280;
  padding:2px 9px;border-radius:3px}
 .tot{margin-left:auto;font-size:24px;font-weight:700;color:#b06a12}
@@ -66,7 +66,7 @@ td.rl small{font-size:11px;font-weight:400;margin-left:1px}
 .g,.b{margin:0;padding:10px 14px;font-size:13px}
 .g{border-top:1px solid #e6e8eb}
 .b{background:#fdf3f0;color:#7d3421;border-top:1px solid #f2ddd6}
-.b::before{content:"\5f31\70b9\3000";font-weight:700;font-size:11px}
+.b::before{content:"弱点　";font-weight:700;font-size:11px}
 .c a{display:block;padding:11px 14px;border-top:1px solid #e6e8eb;
  color:#1858a8;text-decoration:none;font-size:13px;font-weight:600}
 .gcard{background:#fff;border:1px solid #dcdfe4;border-radius:5px;margin:0 0 13px;overflow:hidden}
@@ -126,7 +126,7 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 .bar b{margin-left:auto;font-size:12px;color:#1a1d22;white-space:nowrap}
 .bar b small{font-size:10px;font-weight:400;color:#8b919b}
 .lk{margin:0;padding:8px 14px;font-size:12.5px;color:#5c636e;border-top:1px solid #f1f2f4}
-.lk::before{content:"\898bÅf>eeÀ0";font-weight:700;font-size:11px;color:#1a4f8a}
+.lk::before{content:"見た目　";font-weight:700;font-size:11px;color:#1a4f8a}
 .sumc .sp{border-top:1px solid #e6e8eb}
 @media(max-width:620px){.tabs{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:430px){.sp th{width:30%}.tot{font-size:21px}h1{font-size:19px}
@@ -140,8 +140,8 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 <h1>トヨタ マークX ── 候補まとめ</h1>
 <p class="sub">2026年9月22日時点のカーセンサー掲載内容（価格と在庫を同日に再確認）。<b>最初のタブ「総合評価」が結論</b>です——買うときの値段ではなく、<b>5年間持ったときに出ていくお金の合計（故障の備えと販売店の質まで金額に換算したもの）</b>で15台を並べています。2〜3番目のタブは、買うときの安さだけ／状態だけで見たときの並びです。</p>
 
-<div class="tabs" role="tablist">
- <button class="tb" role="tab" id="t1" aria-controls="p1" aria-selected="true">総合評価<small>5年の総額で順位</small></button>
+<div class="tabs" role="tablist" aria-label="候補の見方">
+ <button class="tb" role="tab" id="t1" aria-controls="p1" aria-selected="true">総合評価<small>5年費用を7割重視</small></button>
  <button class="tb" role="tab" id="t2" aria-controls="p2" aria-selected="false">価格優先<small>買うときの安さ</small></button>
  <button class="tb" role="tab" id="t3" aria-controls="p3" aria-selected="false">状態優先<small>記録簿・1オーナー</small></button>
  <button class="tb" role="tab" id="t4" aria-controls="p4" aria-selected="false">型と年表<small>5つの型・相場</small></button>
@@ -150,18 +150,21 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 <section id="p1" role="tabpanel" aria-labelledby="t1">
 <div class="box blue">
 <h2>結論 ── 「買うときの値段」ではなく「5年で出ていく合計」で並べました</h2>
-<p>中古車は、買ったあとに出ていくお金のほうがずっと大きくなります。実際、この15台の<b>買うときの値段は36.8万〜86.6万円（差は49.8万円）</b>ですが、<b>5年持ったときの合計は175万〜215万円（差は40万円）</b>。
-<b>5年で出ていくお金のうち、買うときに払うぶんは2〜4割にすぎません。</b>だからこのタブでは、次のものを全部足した金額で順位をつけています。</p>
+<p><b>前提は「2026年10月に買って、2031年9月まで5年間持つ」</b>です。中古車は、買ったあとに出ていくお金のほうがずっと大きくなります。実際、この15台の<b>買うときの値段は36.8万〜86.6万円（差は49.8万円）</b>ですが、<b>5年ぶんの合計は176万〜216万円</b>。
+<b>5年でかかるお金のうち、買うときに払うぶんは約2〜4割にすぎません。</b>だからこのタブでは、次のものを全部足した金額で順位をつけています。</p>
 <table class="mini">
 <tr><th>車両の支払総額</th><td>掲載されている支払総額</td></tr>
 <tr><th>引き取り</th><td>高崎から取りに行く費用</td></tr>
-<tr><th>車検（5年ぶん）</th><td>1回11.6万円で計算し、<b>購入時に付いてくる車検の残り月数ぶんを差し引き</b></td></tr>
+<tr><th>車検（5年ぶん）</th><td>1回11.6万円（18年超に入ると12.1万円）を月割りし、<b>購入時に付いてくる残り月数ぶんを差し引き</b></td></tr>
 <tr><th>納車時の点検整備</th><td>「法定整備なし」の車は+5万円</td></tr>
 <tr><th>自動車税</th><td>51,700円×5年（全車同額）</td></tr>
 <tr><th>ガソリン</th><td>年6,000km・実燃費9.6km/Lで5年ぶん。<b>初代はハイオクなので3.4万円高い</b></td></tr>
 <tr><th>故障の備え</th><td class="rp"><b>期待値で金額にしたもの。</b>年式・走行距離・保証・記録簿・<b>販売店の評判</b>で増減</td></tr>
 </table>
 <p style="margin-top:9px"><b>売却額は引いていません。</b>乗り潰す前提で見たいという話だったので、5年後に売れる金額は当てにせず、ゼロとして計算しています。</p>
+<p style="margin-top:8px"><b>車検の数え方</b>／車検は2年ごとなので5年ちょうどでは割り切れません。<b>買ったときに付いてくる車検の残りぶんは差し引き、逆に5年を過ぎて残る車検ぶんは足していません</b>（乗り潰す前提なら、その残りは無駄にならないからです）。そのぶん<b>実際に財布から出る現金より少なめの数字</b>になりますが、車どうしを比べるにはこちらのほうが公平です。<br>
+また<b>初度登録から18年を超えると重量税が45,600円→50,400円に上がる</b>ので、5年の途中でそこをまたぐ車は月単位で切り替えて計算しています（年式しか分からないので、その年の7月に到達するものと置きました）。</p>
+<p style="margin-top:8px">⚠️<b>入っていない費用</b>／<b>任意保険・駐車場代・県外登録の追加費用（群馬ナンバーにする場合の数万円）は含めていません。</b>任意保険と駐車場はどの車を選んでも同じようにかかるので順位には影響しませんが、<b>実際に必要なお金はここに書いた金額より多くなります</b>。</p>
 </div>
 
 <div class="box warn">
@@ -169,7 +172,7 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 <p><b>カーセンサーのクチコミは「その店で車を買った人」しか書けません。</b>だから満足した人に寄りやすい。
 一方<b>Googleマップは、買取だけの人も、見に行っただけの人も書けます。</b>両方を見ると、同じ店の評価がはっきり割れることがあります。</p>
 <table class="mini">
-<tr><th>神奈川の店（12位）</th><td>カーセンサー <b>5.0点</b>（57件） ／ Google <b class="bad">3.2点</b>（25件・<b class="bad">1★が10件＝低評価44%</b>）</td></tr>
+<tr><th>神奈川の店（12位）</th><td>カーセンサー <b>5.0点</b>（57件） ／ Google <b class="bad">3.2点</b>（25件・<b class="bad">1★10件＋2★1件＝低評価44%</b>）</td></tr>
 <tr><th>埼玉三郷の店（13位）</th><td>カーセンサー <b>5.0点</b>（23件） ／ Google <b class="bad">4.1点</b>（18件・低評価22%）</td></tr>
 <tr><th>千葉の店（8位）</th><td>カーセンサー <b>4.9点</b>（352件） ／ Google <b>4.3点</b>（235件・低評価15%）</td></tr>
 <tr><th>長野の店（3位）</th><td>カーセンサー <b>クチコミなし</b> ／ Google <b>4.3点</b>（29件・低評価14%）</td></tr>
@@ -179,19 +182,19 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 
 <article class="c sumc">
  <div class="rk"><span class="n">1</span><span class="pts">89<small>点</small></span>
-  <span class="tot">175.2<small>万円</small></span></div>
+  <span class="tot">176.0<small>万円</small></span></div>
  <img src="img/AU7345908169.jpg" alt="マークX 2009年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>175.2万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>176.0万円</b>
   <span class="pk">／ 買うときに払うのは 38.0万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>380,000円</td></tr>
   <tr><th>引き取り</th><td>6,000円<span class="pk">埼玉県さいたま市見沼区</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>189,248円<span class="pk">購入時に付く21ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>197,048円<span class="pk">購入時に付く21ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td><b>50,000円</b><span class="pk">法定整備が付かないので別途</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>565,000円<span class="pk">初代＝ハイオク</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">303,000円<span class="pk">20年落ち・7万km基準の35万円、年式で-1万円、走行で-0.2万円、保証で-3万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>1,751,748円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">303,000円<span class="pk">18年落ち・7万km基準の35万円、年式で-1.5万円、走行で-0.2万円、保証で-3万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>1,759,548円</b></td></tr>
  </table>
  <div class="bars">
   <div class="bar"><span>コスト</span><i style="width:100.0%"></i><b>75<small>/75</small></b></div>
@@ -209,19 +212,19 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 </article>
 <article class="c sumc">
  <div class="rk"><span class="n">2</span><span class="pts">87<small>点</small></span>
-  <span class="tot">175.8<small>万円</small></span></div>
+  <span class="tot">176.6<small>万円</small></span></div>
  <img src="img/AU7225721238.jpg" alt="マークX 2010年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>175.8万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>176.6万円</b>
   <span class="pk">／ 買うときに払うのは 38.9万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>389,000円</td></tr>
   <tr><th>引き取り</th><td>7,000円<span class="pk">千葉県野田市</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>232,920円<span class="pk">購入時に付く12ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>240,720円<span class="pk">購入時に付く12ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td>0円<span class="pk">法定整備付きなので追加なし</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>530,938円<span class="pk">2代目＝レギュラー</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">340,000円<span class="pk">20年落ち・7万km基準の35万円、年式で-3万円、走行で+2.0万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>1,758,358円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">340,000円<span class="pk">18年落ち・7万km基準の35万円、年式で-3.0万円、走行で+2.0万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>1,766,158円</b></td></tr>
  </table>
  <div class="bars">
   <div class="bar"><span>コスト</span><i style="width:98.3%"></i><b>74<small>/75</small></b></div>
@@ -238,23 +241,23 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
  <a href="https://www.carsensor.net/usedcar/detail/AU7225721238/index.html" target="_blank" rel="noopener">カーセンサーで見る →</a>
 </article>
 <article class="c sumc">
- <div class="rk"><span class="n">3</span><span class="pts">85<small>点</small></span>
-  <span class="tot">177.4<small>万円</small></span></div>
+ <div class="rk"><span class="n">3</span><span class="pts">81<small>点</small></span>
+  <span class="tot">180.3<small>万円</small></span></div>
  <img src="img/AU7329831308.jpg" alt="マークX 2007年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>177.4万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>180.3万円</b>
   <span class="pk">／ 買うときに払うのは 36.8万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>368,000円</td></tr>
   <tr><th>引き取り</th><td>14,000円<span class="pk">長野県塩尻市</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>203,805円<span class="pk">購入時に付く18ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>212,205円<span class="pk">購入時に付く18ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td><b>50,000円</b><span class="pk">法定整備が付かないので別途</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>565,000円<span class="pk">初代＝ハイオク</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">315,000円<span class="pk">20年落ち・7万km基準の35万円、年式で+1万円、走行で-3.0万円、店の評価で-2万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>1,774,305円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">335,000円<span class="pk">18年落ち・7万km基準の35万円、年式で+1.5万円、走行で-3.0万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>1,802,705円</b></td></tr>
  </table>
  <div class="bars">
-  <div class="bar"><span>コスト</span><i style="width:94.4%"></i><b>71<small>/75</small></b></div>
+  <div class="bar"><span>コスト</span><i style="width:89.2%"></i><b>67<small>/75</small></b></div>
   <div class="bar"><span>寿命</span><i class="b2" style="width:58.9%"></i><b>9<small>/15</small></b></div>
   <div class="bar"><span>見た目</span><i class="b3" style="width:50.0%"></i><b>5<small>/10</small></b></div>
  </div>
@@ -263,28 +266,28 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
   <tr><th>保証</th><td class="ng">保証なし</td><th>整備記録簿</th><td class="no">－</td></tr>
   <tr><th>販売店</th><td colspan="3">アクロスオート塩尻店<br><span class="rv rv-none">カーセンサー クチコミなし</span><span class="rv ">Google ★4.3<em>（29件・低評価14%）</em></span></td></tr>
  </table>
- <p class="g"><b>この店について</b>／低評価4件は<b>すべて「一括査定に申し込んだ直後の着信・SMSがしつこい」という買取側の話</b>で、売った車の不具合ではありません。5★は買取価格への満足が中心。<b>カーセンサーでは「クチコミなし」でしたが、Googleには29件あって4.3点</b>——評価がないのではなく、買取で使われている店でした。</p>
+ <p class="g"><b>この店について</b>／低評価4件は<b>すべて「一括査定に申し込んだ直後の着信・SMSがしつこい」という買取側の話</b>で、売った車の不具合ではありません。5★は買取価格への満足が中心。<b>カーセンサーでは「クチコミなし」でしたが、Googleには29件あって4.3点</b>——評価がないのではなく、買取で使われている店でした。⚠️ただし<b>高評価のほうも買取価格への満足が中心</b>なので、<b>「車を売る店としての質」は良いとも悪いとも判断できません</b>。故障の備えは増減なし（±0円）にしています。</p>
  <p class="lk">標準の250G。左右パワーシート・MTモード付き</p>
  <a href="https://www.carsensor.net/usedcar/detail/AU7329831308/index.html" target="_blank" rel="noopener">カーセンサーで見る →</a>
 </article>
 <article class="c sumc">
  <div class="rk"><span class="n">4</span><span class="pts">79<small>点</small></span>
-  <span class="tot">179.7<small>万円</small></span></div>
+  <span class="tot">180.4<small>万円</small></span></div>
  <img src="img/AU7335928475.jpg" alt="マークX 2007年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>179.7万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>180.4万円</b>
   <span class="pk">／ 買うときに払うのは 38.0万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>380,000円</td></tr>
   <tr><th>引き取り</th><td>80,000円<span class="pk">北海道釧路市</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>174,690円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>181,890円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td>0円<span class="pk">法定整備付きなので追加なし</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>565,000円<span class="pk">初代＝ハイオク</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">339,000円<span class="pk">20年落ち・7万km基準の35万円、年式で+1万円、走行で+1.4万円、店の評価で-4万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>1,797,190円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">339,000円<span class="pk">18年落ち・7万km基準の35万円、年式で+1.5万円、走行で+1.4万円、店の評価で-4.0万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>1,804,390円</b></td></tr>
  </table>
  <div class="bars">
-  <div class="bar"><span>コスト</span><i style="width:88.6%"></i><b>66<small>/75</small></b></div>
+  <div class="bar"><span>コスト</span><i style="width:88.8%"></i><b>67<small>/75</small></b></div>
   <div class="bar"><span>寿命</span><i class="b2" style="width:34.4%"></i><b>5<small>/15</small></b></div>
   <div class="bar"><span>見た目</span><i class="b3" style="width:70.0%"></i><b>7<small>/10</small></b></div>
  </div>
@@ -299,22 +302,22 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 </article>
 <article class="c sumc">
  <div class="rk"><span class="n">5</span><span class="pts">75<small>点</small></span>
-  <span class="tot">183.2<small>万円</small></span></div>
+  <span class="tot">183.9<small>万円</small></span></div>
  <img src="img/AU6754633457.jpg" alt="マークX 2009年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>183.2万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>183.9万円</b>
   <span class="pk">／ 買うときに払うのは 58.1万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>581,000円</td></tr>
   <tr><th>引き取り</th><td>8,000円<span class="pk">埼玉県ふじみ野市</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>174,690円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>181,890円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td>0円<span class="pk">法定整備付きなので追加なし</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>565,000円<span class="pk">初代＝ハイオク</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">245,000円<span class="pk">20年落ち・7万km基準の35万円、年式で-1万円、走行で-1.0万円、店の評価で-2万円、保証で-3万円、記録簿で-3万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>1,832,190円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">245,000円<span class="pk">18年落ち・7万km基準の35万円、年式で-1.5万円、走行で-1.0万円、店の評価で-2.0万円、保証で-3万円、記録簿で-3万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>1,839,390円</b></td></tr>
  </table>
  <div class="bars">
-  <div class="bar"><span>コスト</span><i style="width:79.9%"></i><b>60<small>/75</small></b></div>
+  <div class="bar"><span>コスト</span><i style="width:80.0%"></i><b>60<small>/75</small></b></div>
   <div class="bar"><span>寿命</span><i class="b2" style="width:58.9%"></i><b>9<small>/15</small></b></div>
   <div class="bar"><span>見た目</span><i class="b3" style="width:60.0%"></i><b>6<small>/10</small></b></div>
  </div>
@@ -329,22 +332,22 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 </article>
 <article class="c sumc">
  <div class="rk"><span class="n">6</span><span class="pts">71<small>点</small></span>
-  <span class="tot">184.6<small>万円</small></span></div>
+  <span class="tot">185.6<small>万円</small></span></div>
  <img src="img/AU7000339375.jpg" alt="マークX 2006年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>184.6万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>185.6万円</b>
   <span class="pk">／ 買うときに払うのは 43.0万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>430,000円</td></tr>
   <tr><th>引き取り</th><td>10,000円<span class="pk">茨城県龍ケ崎市</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>252,330円<span class="pk">購入時に付く8ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>262,730円<span class="pk">購入時に付く8ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td>0円<span class="pk">法定整備付きなので追加なし</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>565,000円<span class="pk">初代＝ハイオク</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">330,000円<span class="pk">20年落ち・7万km基準の35万円、年式で+3万円、走行で-3.0万円、店の評価で-2万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>1,845,830円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">330,000円<span class="pk">18年落ち・7万km基準の35万円、年式で+3.0万円、走行で-3.0万円、店の評価で-2.0万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>1,856,230円</b></td></tr>
  </table>
  <div class="bars">
-  <div class="bar"><span>コスト</span><i style="width:76.4%"></i><b>57<small>/75</small></b></div>
+  <div class="bar"><span>コスト</span><i style="width:75.8%"></i><b>57<small>/75</small></b></div>
   <div class="bar"><span>寿命</span><i class="b2" style="width:53.3%"></i><b>8<small>/15</small></b></div>
   <div class="bar"><span>見た目</span><i class="b3" style="width:60.0%"></i><b>6<small>/10</small></b></div>
  </div>
@@ -359,22 +362,22 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 </article>
 <article class="c sumc">
  <div class="rk"><span class="n">7</span><span class="pts">70<small>点</small></span>
-  <span class="tot">183.8<small>万円</small></span></div>
+  <span class="tot">184.4<small>万円</small></span></div>
  <img src="img/AU7327934892.jpg" alt="マークX 2011年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>183.8万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>184.4万円</b>
   <span class="pk">／ 買うときに払うのは 59.8万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>598,000円</td></tr>
   <tr><th>引き取り</th><td>15,000円<span class="pk">新潟県</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>174,690円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>180,090円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td>0円<span class="pk">法定整備付きなので追加なし</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>530,938円<span class="pk">2代目＝レギュラー</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">261,000円<span class="pk">20年落ち・7万km基準の35万円、年式で-4万円、走行で+5.6万円、店の評価で-4万円、保証で-3万円、記録簿で-3万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>1,838,128円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">261,000円<span class="pk">18年落ち・7万km基準の35万円、年式で-4.5万円、走行で+5.6万円、店の評価で-4.0万円、保証で-3万円、記録簿で-3万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>1,843,528円</b></td></tr>
  </table>
  <div class="bars">
-  <div class="bar"><span>コスト</span><i style="width:78.4%"></i><b>59<small>/75</small></b></div>
+  <div class="bar"><span>コスト</span><i style="width:79.0%"></i><b>59<small>/75</small></b></div>
   <div class="bar"><span>寿命</span><i class="b2" style="width:33.3%"></i><b>5<small>/15</small></b></div>
   <div class="bar"><span>見た目</span><i class="b3" style="width:60.0%"></i><b>6<small>/10</small></b></div>
  </div>
@@ -389,22 +392,22 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 </article>
 <article class="c sumc">
  <div class="rk"><span class="n">8</span><span class="pts">70<small>点</small></span>
-  <span class="tot">184.7<small>万円</small></span></div>
+  <span class="tot">185.4<small>万円</small></span></div>
  <img src="img/AU6903905016.jpg" alt="マークX 2008年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>184.7万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>185.4万円</b>
   <span class="pk">／ 買うときに払うのは 44.8万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>448,000円</td></tr>
   <tr><th>引き取り</th><td>7,000円<span class="pk">千葉県野田市</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>174,690円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>181,890円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td><b>50,000円</b><span class="pk">法定整備が付かないので別途</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>565,000円<span class="pk">初代＝ハイオク</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">344,000円<span class="pk">20年落ち・7万km基準の35万円、走行で-0.6万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>1,847,190円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">344,000円<span class="pk">18年落ち・7万km基準の35万円、走行で-0.6万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>1,854,390円</b></td></tr>
  </table>
  <div class="bars">
-  <div class="bar"><span>コスト</span><i style="width:76.1%"></i><b>57<small>/75</small></b></div>
+  <div class="bar"><span>コスト</span><i style="width:76.3%"></i><b>57<small>/75</small></b></div>
   <div class="bar"><span>寿命</span><i class="b2" style="width:51.1%"></i><b>8<small>/15</small></b></div>
   <div class="bar"><span>見た目</span><i class="b3" style="width:50.0%"></i><b>5<small>/10</small></b></div>
  </div>
@@ -419,19 +422,19 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 </article>
 <article class="c sumc">
  <div class="rk"><span class="n">9</span><span class="pts">70<small>点</small></span>
-  <span class="tot">187.9<small>万円</small></span></div>
+  <span class="tot">188.7<small>万円</small></span></div>
  <img src="img/AU7254269431.jpg" alt="マークX 2010年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>187.9万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>188.7万円</b>
   <span class="pk">／ 買うときに払うのは 64.8万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>648,000円</td></tr>
   <tr><th>引き取り</th><td>26,000円<span class="pk">愛知県</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>262,035円<span class="pk">購入時に付く6ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>269,835円<span class="pk">購入時に付く6ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td>0円<span class="pk">法定整備付きなので追加なし</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>530,938円<span class="pk">2代目＝レギュラー</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">154,000円<span class="pk">20年落ち・7万km基準の35万円、年式で-3万円、走行で-4.6万円、店の評価で-6万円、保証で-3万円、記録簿で-3万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>1,879,473円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">154,000円<span class="pk">18年落ち・7万km基準の35万円、年式で-3.0万円、走行で-4.6万円、店の評価で-6.0万円、保証で-3万円、記録簿で-3万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>1,887,273円</b></td></tr>
  </table>
  <div class="bars">
   <div class="bar"><span>コスト</span><i style="width:68.0%"></i><b>51<small>/75</small></b></div>
@@ -449,22 +452,22 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 </article>
 <article class="c sumc">
  <div class="rk"><span class="n">10</span><span class="pts">63<small>点</small></span>
-  <span class="tot">187.0<small>万円</small></span></div>
+  <span class="tot">187.7<small>万円</small></span></div>
  <img src="img/AU7305750680.jpg" alt="マークX 2006年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>187.0万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>187.7万円</b>
   <span class="pk">／ 買うときに払うのは 49.9万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>499,000円</td></tr>
   <tr><th>引き取り</th><td>39,000円<span class="pk">兵庫県明石市</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>174,690円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>181,890円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td>0円<span class="pk">法定整備付きなので追加なし</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>565,000円<span class="pk">初代＝ハイオク</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">334,000円<span class="pk">20年落ち・7万km基準の35万円、年式で+3万円、走行で+1.4万円、保証で-3万円、記録簿で-3万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>1,870,190円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">334,000円<span class="pk">18年落ち・7万km基準の35万円、年式で+3.0万円、走行で+1.4万円、保証で-3万円、記録簿で-3万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>1,877,390円</b></td></tr>
  </table>
  <div class="bars">
-  <div class="bar"><span>コスト</span><i style="width:70.3%"></i><b>53<small>/75</small></b></div>
+  <div class="bar"><span>コスト</span><i style="width:70.5%"></i><b>53<small>/75</small></b></div>
   <div class="bar"><span>寿命</span><i class="b2" style="width:28.9%"></i><b>4<small>/15</small></b></div>
   <div class="bar"><span>見た目</span><i class="b3" style="width:60.0%"></i><b>6<small>/10</small></b></div>
  </div>
@@ -479,19 +482,19 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 </article>
 <article class="c sumc">
  <div class="rk"><span class="n">11</span><span class="pts">39<small>点</small></span>
-  <span class="tot">205.0<small>万円</small></span></div>
+  <span class="tot">205.7<small>万円</small></span></div>
  <img src="img/AU7056683739.jpg" alt="マークX 2010年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>205.0万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>205.7万円</b>
   <span class="pk">／ 買うときに払うのは 74.9万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>749,000円</td></tr>
   <tr><th>引き取り</th><td>8,000円<span class="pk">埼玉県</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>257,183円<span class="pk">購入時に付く7ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>264,982円<span class="pk">購入時に付く7ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td><b>50,000円</b><span class="pk">法定整備が付かないので別途</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>530,938円<span class="pk">2代目＝レギュラー</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">196,000円<span class="pk">20年落ち・7万km基準の35万円、年式で-3万円、走行で-6.4万円、保証で-3万円、記録簿で-3万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>2,049,621円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">196,000円<span class="pk">18年落ち・7万km基準の35万円、年式で-3.0万円、走行で-6.4万円、保証で-3万円、記録簿で-3万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>2,057,420円</b></td></tr>
  </table>
  <div class="bars">
   <div class="bar"><span>コスト</span><i style="width:25.4%"></i><b>19<small>/75</small></b></div>
@@ -508,53 +511,23 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
  <a href="https://www.carsensor.net/usedcar/detail/AU7056683739/index.html" target="_blank" rel="noopener">カーセンサーで見る →</a>
 </article>
 <article class="c sumc">
- <div class="rk"><span class="n">12</span><span class="pts">37<small>点</small></span>
-  <span class="tot">201.2<small>万円</small></span></div>
- <img src="img/AU6909093072.jpg" alt="マークX 2005年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>201.2万円</b>
-  <span class="pk">／ 買うときに払うのは 47.8万円</span></p>
- <table class="sp brk">
-  <tr><th>車両（支払総額）</th><td>478,000円</td></tr>
-  <tr><th>引き取り</th><td>11,000円<span class="pk">神奈川県横浜市旭区</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>174,690円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
-  <tr><th>納車時の点検整備</th><td>0円<span class="pk">法定整備付きなので追加なし</span></td></tr>
-  <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
-  <tr><th>ガソリン（5年）</th><td>565,000円<span class="pk">初代＝ハイオク</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">525,000円<span class="pk">20年落ち・7万km基準の35万円、年式で+4万円、走行で-2.0万円、店の評価で+15万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>2,012,190円</b></td></tr>
- </table>
- <div class="bars">
-  <div class="bar"><span>コスト</span><i style="width:34.8%"></i><b>26<small>/75</small></b></div>
-  <div class="bar"><span>寿命</span><i class="b2" style="width:42.2%"></i><b>6<small>/15</small></b></div>
-  <div class="bar"><span>見た目</span><i class="b3" style="width:50.0%"></i><b>5<small>/10</small></b></div>
- </div>
- <table class="sp">
-  <tr><th>型</th><td class="gn">初代 前期</td><th>走行</th><td>6.0万km</td></tr>
-  <tr><th>保証</th><td class="ng">保証なし</td><th>整備記録簿</th><td class="no">－</td></tr>
-  <tr><th>販売店</th><td colspan="3">株式会社 Full Speed<br><span class="rv">カーセンサー ★5.0<em>（57件）</em></span><span class="rv rv-lo">Google ★3.2<em>（25件・低評価44%）</em></span></td></tr>
- </table>
- <p class="g"><b>この店について</b>／🚨<b>カーセンサーは5.0点57件ですが、Googleは3.2点25件で1★が10件（低評価44%）</b>——今回の15店で突出して悪い数字です。しかも中身が重い。<b>「買ってすぐエアコンが壊れていた」「下取りに出した車の名義変更がされず、自動車税の納付書が区役所から届いた。連絡も取れなくなった」「電話に出てもらえず警察に相談済み」</b>——いずれも納車後・取引後のトラブルです。<b>この1台は、価格や走行距離が良くても避けたほうがいいと思います。</b></p>
- <p class="lk">標準の250G</p>
- <a href="https://www.carsensor.net/usedcar/detail/AU6909093072/index.html" target="_blank" rel="noopener">カーセンサーで見る →</a>
-</article>
-<article class="c sumc">
- <div class="rk"><span class="n">13</span><span class="pts">36<small>点</small></span>
-  <span class="tot">201.0<small>万円</small></span></div>
+ <div class="rk"><span class="n">12</span><span class="pts">39<small>点</small></span>
+  <span class="tot">200.0<small>万円</small></span></div>
  <img src="img/AU7308419222.jpg" alt="マークX 2006年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>201.0万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>200.0万円</b>
   <span class="pk">／ 買うときに払うのは 46.8万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>468,000円</td></tr>
   <tr><th>引き取り</th><td>7,000円<span class="pk">埼玉県三郷市</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>247,478円<span class="pk">購入時に付く9ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>257,678円<span class="pk">購入時に付く9ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td><b>50,000円</b><span class="pk">法定整備が付かないので別途</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>565,000円<span class="pk">初代＝ハイオク</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">414,000円<span class="pk">20年落ち・7万km基準の35万円、年式で+3万円、走行で+1.4万円、店の評価で+5万円、記録簿で-3万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>2,009,978円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">394,000円<span class="pk">18年落ち・7万km基準の35万円、年式で+3.0万円、走行で+1.4万円、店の評価で+3.0万円、記録簿で-3万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>2,000,178円</b></td></tr>
  </table>
  <div class="bars">
-  <div class="bar"><span>コスト</span><i style="width:35.4%"></i><b>27<small>/75</small></b></div>
+  <div class="bar"><span>コスト</span><i style="width:39.8%"></i><b>30<small>/75</small></b></div>
   <div class="bar"><span>寿命</span><i class="b2" style="width:28.9%"></i><b>4<small>/15</small></b></div>
   <div class="bar"><span>見た目</span><i class="b3" style="width:50.0%"></i><b>5<small>/10</small></b></div>
  </div>
@@ -563,28 +536,58 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
   <tr><th>保証</th><td class="ng">保証なし</td><th>整備記録簿</th><td class="ok">◯</td></tr>
   <tr><th>販売店</th><td colspan="3">ＦＬＯＡＴ<br><span class="rv">カーセンサー ★5.0<em>（23件）</em></span><span class="rv rv-lo">Google ★4.1<em>（18件・低評価22%）</em></span></td></tr>
  </table>
- <p class="g"><b>この店について</b>／<b>カーセンサーは5.0点23件ですが、Googleは4.1点18件で1★3件＋2★1件（低評価22.2%）</b>。表示された範囲の高評価は「納車整備もしっかり」「明朗会計で余計なオプションを付けられない」と具体的でしたが、<b>低評価の本文までは確認できていません</b>。母数18件と少ないので、訪問前にGoogleの低評価を自分の目で読むことをおすすめします。</p>
+ <p class="g"><b>この店について</b>／<b>カーセンサーは5.0点23件ですが、Googleは4.1点18件で1★3件＋2★1件（低評価22.2%）</b>。表示された範囲の高評価は「納車整備もしっかり」「明朗会計で余計なオプションを付けられない」と具体的でしたが、<b>低評価の本文までは確認できていません</b>。母数18件と少ないので、訪問前にGoogleの低評価を自分の目で読むことをおすすめします。<b>比率だけを根拠に故障の備えを+3万円していますが、これは中身を確認していない暫定の数字です。</b></p>
  <p class="lk">標準の250G</p>
  <a href="https://www.carsensor.net/usedcar/detail/AU7308419222/index.html" target="_blank" rel="noopener">カーセンサーで見る →</a>
 </article>
 <article class="c sumc">
- <div class="rk"><span class="n">14</span><span class="pts">30<small>点</small></span>
-  <span class="tot">207.5<small>万円</small></span></div>
+ <div class="rk"><span class="n">13</span><span class="pts">38<small>点</small></span>
+  <span class="tot">201.9<small>万円</small></span></div>
+ <img src="img/AU6909093072.jpg" alt="マークX 2005年式" loading="lazy">
+ <p class="tcol">5年間の期待トータルコスト <b>201.9万円</b>
+  <span class="pk">／ 買うときに払うのは 47.8万円</span></p>
+ <table class="sp brk">
+  <tr><th>車両（支払総額）</th><td>478,000円</td></tr>
+  <tr><th>引き取り</th><td>11,000円<span class="pk">神奈川県横浜市旭区</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>181,890円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>納車時の点検整備</th><td>0円<span class="pk">法定整備付きなので追加なし</span></td></tr>
+  <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
+  <tr><th>ガソリン（5年）</th><td>565,000円<span class="pk">初代＝ハイオク</span></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">525,000円<span class="pk">18年落ち・7万km基準の35万円、年式で+4.5万円、走行で-2.0万円、店の評価で+15.0万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>2,019,390円</b></td></tr>
+ </table>
+ <div class="bars">
+  <div class="bar"><span>コスト</span><i style="width:34.9%"></i><b>26<small>/75</small></b></div>
+  <div class="bar"><span>寿命</span><i class="b2" style="width:42.2%"></i><b>6<small>/15</small></b></div>
+  <div class="bar"><span>見た目</span><i class="b3" style="width:50.0%"></i><b>5<small>/10</small></b></div>
+ </div>
+ <table class="sp">
+  <tr><th>型</th><td class="gn">初代 前期</td><th>走行</th><td>6.0万km</td></tr>
+  <tr><th>保証</th><td class="ng">保証なし</td><th>整備記録簿</th><td class="no">－</td></tr>
+  <tr><th>販売店</th><td colspan="3">株式会社 Full Speed<br><span class="rv">カーセンサー ★5.0<em>（57件）</em></span><span class="rv rv-lo">Google ★3.2<em>（25件・低評価44%）</em></span></td></tr>
+ </table>
+ <p class="g"><b>この店について</b>／🚨<b>カーセンサーは5.0点57件ですが、Googleは3.2点25件で1★が10件（低評価44%）</b>——今回の15店で突出して悪い数字です。しかも中身が重い。<b>「買ってすぐエアコンが壊れていた」「下取りに出した車の名義変更がされず、自動車税の納付書が区役所から届いた。連絡も取れなくなった」「電話に出てもらえず警察に相談済み」</b>——いずれも納車後・取引後の話です。⚠️<b>これらは投稿者の申告であって、事実関係も店側の対応も確認できていません</b>（店からの返信は付いていませんでした）。それでも<b>同じ方向の申告が10件そろっている</b>ことは重く、<b>この1台は、価格や走行距離が良くても、内容を自分で確かめられるまで保留にしたほうがいいと思います。</b></p>
+ <p class="lk">標準の250G</p>
+ <a href="https://www.carsensor.net/usedcar/detail/AU6909093072/index.html" target="_blank" rel="noopener">カーセンサーで見る →</a>
+</article>
+<article class="c sumc">
+ <div class="rk"><span class="n">14</span><span class="pts">31<small>点</small></span>
+  <span class="tot">208.1<small>万円</small></span></div>
  <img src="img/AU6784515079.jpg" alt="マークX 2011年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>207.5万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>208.1万円</b>
   <span class="pk">／ 買うときに払うのは 86.6万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>866,000円</td></tr>
   <tr><th>引き取り</th><td>10,000円<span class="pk">神奈川県</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>174,690円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>180,090円<span class="pk">購入時に付く24ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td>0円<span class="pk">法定整備付きなので追加なし</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>530,938円<span class="pk">2代目＝レギュラー</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">235,000円<span class="pk">20年落ち・7万km基準の35万円、年式で-4万円、走行で+1.0万円、店の評価で-2万円、保証で-3万円、記録簿で-3万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>2,075,128円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">235,000円<span class="pk">18年落ち・7万km基準の35万円、年式で-4.5万円、走行で+1.0万円、店の評価で-2.0万円、保証で-3万円、記録簿で-3万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>2,080,528円</b></td></tr>
  </table>
  <div class="bars">
-  <div class="bar"><span>コスト</span><i style="width:19.0%"></i><b>14<small>/75</small></b></div>
+  <div class="bar"><span>コスト</span><i style="width:19.6%"></i><b>15<small>/75</small></b></div>
   <div class="bar"><span>寿命</span><i class="b2" style="width:58.9%"></i><b>9<small>/15</small></b></div>
   <div class="bar"><span>見た目</span><i class="b3" style="width:70.0%"></i><b>7<small>/10</small></b></div>
  </div>
@@ -599,19 +602,19 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 </article>
 <article class="c sumc">
  <div class="rk"><span class="n">15</span><span class="pts">15<small>点</small></span>
-  <span class="tot">215.1<small>万円</small></span></div>
+  <span class="tot">215.9<small>万円</small></span></div>
  <img src="img/AU7330040101.jpg" alt="マークX 2010年式" loading="lazy">
- <p class="tcol">5年間の期待トータルコスト <b>215.1万円</b>
+ <p class="tcol">5年間の期待トータルコスト <b>215.9万円</b>
   <span class="pk">／ 買うときに払うのは 64.8万円</span></p>
  <table class="sp brk">
   <tr><th>車両（支払総額）</th><td>648,000円</td></tr>
   <tr><th>引き取り</th><td>2,000円<span class="pk">群馬県</span></td></tr>
-  <tr><th>車検（5年ぶん）</th><td>271,740円<span class="pk">購入時に付く4ヶ月ぶんを差し引き</span></td></tr>
+  <tr><th>車検（5年ぶん）</th><td>279,540円<span class="pk">購入時に付く4ヶ月ぶんを差し引き</span></td></tr>
   <tr><th>納車時の点検整備</th><td><b>50,000円</b><span class="pk">法定整備が付かないので別途</span></td></tr>
   <tr><th>自動車税（5年）</th><td>258,500円<span class="pk">全車同額</span></td></tr>
   <tr><th>ガソリン（5年）</th><td>530,938円<span class="pk">2代目＝レギュラー</span></td></tr>
-  <tr><th>故障の備え<small>期待値</small></th><td class="rp">390,000円<span class="pk">20年落ち・7万km基準の35万円、年式で-3万円、走行で+5.0万円、店の評価で+5万円、記録簿で-3万円</span></td></tr>
-  <tr><th>合計</th><td class="rl"><b>2,151,178円</b></td></tr>
+  <tr><th>故障の備え<small>期待値</small></th><td class="rp">390,000円<span class="pk">18年落ち・7万km基準の35万円、年式で-3.0万円、走行で+5.0万円、店の評価で+5.0万円、記録簿で-3万円</span></td></tr>
+  <tr><th>合計</th><td class="rl"><b>2,158,978円</b></td></tr>
  </table>
  <div class="bars">
   <div class="bar"><span>コスト</span><i style="width:0.0%"></i><b>0<small>/75</small></b></div>
@@ -636,7 +639,7 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 <tr><th>寿命（15点）</th><td>走行距離の少なさ10点＋年式の新しさ5点。<b>乗り潰す前提だと、5年より先に残っている余力が効く</b>ため</td></tr>
 <tr><th>見た目（10点）</th><td>Sパッケージ・4WD・特別仕様かどうか。<b>ここだけは主観です</b></td></tr>
 </table>
-<p style="margin-top:9px"><b>「故障の備え」の計算</b>／20年落ち・走行7万kmの個体を5年乗るときに、車検の点検整備とは別に出るお金を<b>35万円</b>と置きました（タイヤ5万・バッテリー2.5万・ブレーキ5万・オイル類5万・冷却系8万・エアコン系の期待値5万・電装ほかの期待値5万）。そこから──</p>
+<p style="margin-top:9px"><b>「故障の備え」の計算</b>／18年落ち（2008年式）・走行7万kmの個体を5年乗るときに、車検の点検整備とは別に出るお金を<b>35万円</b>と置きました（タイヤ5万・バッテリー2.5万・ブレーキ5万・オイル類5万・冷却系8万・エアコン系の期待値5万・電装ほかの期待値5万）。そこから──</p>
 <table class="mini">
 <tr><th>年式</th><td>2008年式を基準に、1年古いごとに<b>+1.5万円</b></td></tr>
 <tr><th>走行距離</th><td>7万kmを基準に、1万kmごとに<b>±2万円</b></td></tr>
@@ -644,7 +647,8 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 <tr><th>保証あり</th><td>−3万円</td></tr>
 <tr><th>整備記録簿あり</th><td>−3万円</td></tr>
 </table>
-<p style="margin-top:9px">⚠️<b>この係数は決め打ちです。</b>実際の故障は個体差が大きく、当たれば10万円で済み、外れれば50万円かかります。足回り（ショック4本で8万円前後）は「不調が出るまで換えない」前提で入れていないので、<b>むしろ控えめな見積もり</b>です。数字そのものより、<b>「買うときの5万円差は、5年で見ると誤差になる」という大小関係のほうを見てください。</b></p>
+<p style="margin-top:9px">⚠️<b>この係数は決め打ちの仮置きです。</b>故障の発生率そのものを調べた統計に基づく数字ではありません。実際の故障は個体差が大きく、当たれば10万円で済み、外れれば50万円かかります。足回り（ショック4本で8万円前後）と、直噴エンジンの吸気系カーボン除去は「不調が出るまで手を付けない」前提で入れていないので、<b>そこが出れば上振れします</b>。保証の期間・対象・上限も物件ごとに違うため、一律−3万円という置き方も粗いものです。<br>
+<b>数字そのものより、「買うときの5万円差は、5年で見ると誤差になる」という大小関係のほうを見てください。</b></p>
 </div>
 </section>
 
@@ -653,7 +657,7 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 <div class="box">
 <h2>価格優先 ── 支払総額50万円以内 × 走行8万km以内</h2>
 <p>価格と走行距離は数字ではっきり分かる条件なので、まずこの2つを満たしました（修復歴なしも必須）。該当したのは全国9台で、<b>並び順は「支払総額＋引き取り費」の安い順</b>です。<br><b>1位は実質38.2万円（長野・2007年・5.5万km）、2位は38.6万円（埼玉・2009年・6.9万km・保証付）で、差はわずか4千円。</b><br><b>実質45万円以内に収まるのは上位4台</b>で、そこに区切り線を入れています。</p>
-<p style="margin-top:8px"><b>販売店の評価も入れました。</b>カーセンサーの店舗クチコミ（5点満点・投稿数つき）です。ここを見ると、<b>実質45万円以内の4台のうち、1位（長野）と3位（千葉）はクチコミが1件も付いていない店</b>で、逆に<b>4位（茨城・4.7点205件）と、ラインのすぐ外にいる5位（千葉・4.9点352件）は実績が厚い</b>という差が出ます。1位と4位の価格差は5.8万円。<b>その5.8万円で「何百件も取引を見てきた店から買う」という安心を買うかどうか</b>が、このタブの実質的な分かれ目です。</p><p style="margin-top:8px"><b>考え方</b>／1位と、状態優先タブの1位（58.1万円）の差は約20万円あります。状態の良さは壊れる確率を下げますが、ゼロにはしません。一方<b>価格差は確実に手元に残ります</b>。20万円あれば、万一の修理も、極端な話もう1台買い直すことも視野に入る——という判断で、このタブを先頭に置いています。</p>
+<p style="margin-top:8px"><b>販売店の評価も入れました。</b>カーセンサーの店舗クチコミ（5点満点・投稿数つき）です。ここを見ると、<b>実質45万円以内の4台のうち、1位（長野）と3位（千葉）はクチコミが1件も付いていない店</b>で、逆に<b>4位（茨城・4.7点205件）と、ラインのすぐ外にいる5位（千葉・4.9点352件）は実績が厚い</b>という差が出ます。1位と4位の価格差は5.8万円。<b>その5.8万円で「何百件も取引を見てきた店から買う」という安心を買うかどうか</b>が、このタブの実質的な分かれ目です。</p><p style="margin-top:8px"><b>考え方</b>／1位と、状態優先タブの1位（58.1万円）の差は約20万円あります。状態の良さは壊れる確率を下げますが、ゼロにはしません。一方<b>価格差は確実に手元に残ります</b>。20万円あれば、万一の修理も、極端な話もう1台買い直すことも視野に入る、という見方です。<b>ただしこのタブは「買うときの安さ」だけの並びで、5年ぶんの費用は見ていません。</b>そちらは最初の「総合評価」タブを見てください。</p>
 </div>
 
 <article class="c">
@@ -1015,7 +1019,9 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 
 <div class="note">
 <p><b>型の判定について</b>／各車がどの型かは、年式ではなく<b>カーセンサーがその物件に紐づけているカタログの型</b>で判定しています（2006年式と2009年式はマイナーチェンジ／フルモデルチェンジをまたぐため、年だけでは決まらないからです）。掲載終了の1台だけは紐付けが取れないため「初代」までの記載にとどめています。</p>
-<p><b>販売店の評価の読み方</b>／点数はカーセンサーの店舗クチコミ（5点満点）で、カッコ内は投稿数です。<b>点数より投稿数のほうが効きます</b>——5.0点でも投稿8件なら「たまたま良かった8人」かもしれませんが、4.9点で352件なら傾向として信用できます。そこで<b>4.5点以上かつ50件以上のものだけ緑</b>にし、<b>4.0点未満は赤</b>、<b>投稿1〜9件には「件数が少なめ」</b>、<b>0件は「クチコミなし」</b>と出しています。<b>「クチコミなし」は悪い店という意味ではありません</b>（開設が新しい、掲載を始めたばかりなど）。ただし<b>事前に人柄や対応を知る手がかりがない</b>ということなので、遠方なら電話で話してから動くことをおすすめします。投稿できるのは<b>その販売店で中古車を購入した人</b>で、購入のときにカーセンサーを使ったかどうかは問われません。つまり投稿数は、その店で買った人がどれだけ評価を残したかの目安になります。</p>
+<p><b>販売店の評価の読み方</b>／各カードに<b>カーセンサーとGoogleマップの両方</b>を並べています。<b>カーセンサーに投稿できるのはその販売店で中古車を買った人だけ</b>（購入時にカーセンサーを使ったかは問われません）なのに対し、<b>Googleは買取だけの人も、見に行っただけの人も書けます</b>。母集団が違うので点数がずれます。<br>
+Googleのバッジのカッコ内は<b>「総件数・低評価の比率」</b>で、<b>低評価＝1★と2★の合計</b>です。<b>低評価10%未満を緑、20%以上を赤</b>、件数5件未満は灰色（母数が足りず判断できない）にしました。<b>点数より件数と比率のほうが効きます</b>——5.0点でも10件なら「たまたま良かった10人」かもしれませんが、4.8点で869件なら傾向として信用できます。<br>
+そして<b>比率と同じくらい「低評価の中身」が大事です。</b>同じ低評価14%でも、中身が「買取の営業電話がしつこい」なのか「買った車がすぐ壊れた」なのかで意味がまったく違います。<b>各車のカードに、その店の低評価が何の話なのかを1件ずつ書きました。</b>ただし<b>クチコミは投稿者の申告であって、事実関係を確認したものではありません。</b></p>
 <p><b>整備記録簿について</b>／カーセンサーの定型欄で分かるのは「有無」だけです。何年分・何枚残っているかは定型欄には出ず、店舗のコメント欄に書かれている場合にのみ分かります。今回確認した範囲では、どの車にも枚数・対象年の記載はありませんでした。<b>購入前に必ず販売店へ問い合わせが必要です。</b></p>
 <p><b>「定期点検記録簿」欄について</b>／表の◯は、カーセンサーの定型欄で「あり」と申告されているという意味です。<b>「－」は記録簿が存在しないことの証明ではありません</b>（申告していないだけの場合があります）。また、納車整備の記録簿を新たに渡す店もあります。いずれも問い合わせが必要です。</p>
 <p><b>引き取り費</b>／群馬県高崎市を起点に、行きを公共交通・帰りを自走として計算した概算です。</p>
@@ -1025,20 +1031,38 @@ td.rp{background:#fbf6ff;color:#5b3a8a}
 <p><b>出典</b>／型の区切り・型式・エンジン出力・指定燃料はカーセンサーの車種カタログ（初代＝2004年11月〜2009年9月／2代目＝2009年10月〜2019年12月）、各マイナーチェンジの内容はトヨタのニュースリリース、車両重量と全長・全幅はトヨタの主要諸元表によります。いずれも2026年9月22日に参照しました。<b>寸法はカーセンサーのカタログだと「1.78m」のようにメートルで丸められている</b>ため、ミリ単位の値はトヨタの諸元の方を採っています。</p>
 <p><b>検証</b>／このページの数値は公開前に別AI（OpenAI Codex）へWeb検索つきで照合させています。2026年9月22日の照合で指摘され、修正したのは次の点です。<b>全幅を1,780→1,800mmと書いていたのを実寸の1,775→1,795mmに訂正</b>、<b>状態優先1位を「この条件でこの価格は他にない」と書いていたが、価格優先9位が同じ4条件をより安く満たすため訂正</b>、価格優先4位の「2位と並んで最少」を「1位と並んで最少」に訂正、マイナーチェンジの回数を2回→3回に訂正、4WDの車両重量を世代別に分離、重量税の18年超の境界日について断定を取り下げ、2019年の生産終了を「トヨタのV6・FRセダンの終わり」と書いていた誇張を撤回。以前の照合で修正したのは、世代の記載・条件を満たす台数の断定・自動車税額・車検費用の二重計上です。</p>
 <p><b>検証（2回目・販売店の評価とガソリン代を足したあと）</b>／<b>クチコミの投稿資格を「カーセンサー経由で買った人だけ」と書いていたのは誤りで、購入時にカーセンサーを使ったかは問われません</b>——訂正しました。ほかに、実燃費の達成率の計算違い（73%→そもそも記載をやめました）、ガソリン価格の調査日の明記、自賠責の2026年11月改定の追記、色分けの基準の明記、そして<b>「順位がひっくり返る」という書き方が強すぎた点</b>（燃料費だけの比較であって総費用の優劣は決まらない）を直しています。ガソリン代の計算そのもの（年625L・約10.6万円／11.3万円・差6,800円）、維持費の合計、販売店16件の点数と投稿数、走行距離の前提変更は、いずれも照合で問題なしでした。</p>
+<p><b>検証（3回目・総合評価タブを足したあと）</b>／致命的な指摘が2つありました。<b>①車検費用の計算に、初度登録18年超で重量税が50,400円に上がるぶんが入っていませんでした</b>（月単位で切り替えるよう直し、古い年式ほど少し高くなりました）。<b>②「5年で出ていくお金」と書いていましたが、実際には5年を過ぎて残る車検ぶんを足していない「5年に割り当てた費用」でした</b>——数え方を本文に明記し、実際の現金支出より少なめの数字になることを書き足しています。<br>
+ほかに、タブの副題が「総額順」に読めるのに実際は総合点順だった点、任意保険・駐車場・県外登録費が入っていないことの明示、「20年落ち基準」が実際は18年落ちだった点、「1★が10件＝44%」の内訳（正しくは1★10件＋2★1件）、年式補正の表示の丸め、見出し「見た目」のCSSが文字化けしていた点を直しました。<br>
+判断にかかわる指摘も入れています。<b>長野の店は買取の口コミしかないので「販売店としての質」は良いとも悪いとも言えない</b>——故障の備えの−2万円を取り下げて±0円にしました。<b>神奈川の店については、口コミの内容は投稿者の申告であって事実関係を確認したものではない</b>と明記し、「避けたほうがいい」を「自分で確かめられるまで保留に」に改めています。埼玉三郷の店も、低評価の本文を読めていないので+3万円に下げ、暫定だと書きました。<br>
+一方、<b>15台ぶんの費用の内訳・合計・採点・順位はすべて再計算と一致</b>、Googleの星分布と低評価比率も整合、4タブの切り替えとARIAの対応にも問題なしでした。</p>
 </div>
 
 </div>
 <script>
 (function(){
- var N=4,tabs=[],pans=[],i;
+ var N=4,tabs=[],pans=[],i,cur=0;
  for(i=1;i<=N;i++){tabs.push(document.getElementById('t'+i));pans.push(document.getElementById('p'+i));}
- function sel(k){
-  tabs.forEach(function(t,j){t.setAttribute('aria-selected',j===k?'true':'false');});
-  pans.forEach(function(p,j){p.hidden=(j!==k);});
-  window.scrollTo(0,0);
+ function sel(k,focus){
+  cur=k;
+  tabs.forEach(function(t,j){
+   t.setAttribute('aria-selected',j===k?'true':'false');
+   t.tabIndex=(j===k?0:-1);
+  });
+  pans.forEach(function(p,j){p.hidden=(j!==k);p.tabIndex=0;});
+  if(focus){tabs[k].focus();}else{window.scrollTo(0,0);}
   try{localStorage.setItem('markx_tab_v3',String(k));}catch(e){}
  }
- tabs.forEach(function(t,k){t.addEventListener('click',function(){sel(k);});});
+ tabs.forEach(function(t,k){
+  t.addEventListener('click',function(){sel(k);});
+  t.addEventListener('keydown',function(e){
+   var k2=null;
+   if(e.key==='ArrowRight'){k2=(cur+1)%N;}
+   else if(e.key==='ArrowLeft'){k2=(cur+N-1)%N;}
+   else if(e.key==='Home'){k2=0;}
+   else if(e.key==='End'){k2=N-1;}
+   if(k2!==null){e.preventDefault();sel(k2,true);}
+  });
+ });
  var s=0; try{s=parseInt(localStorage.getItem('markx_tab_v3')||'0',10)||0;}catch(e){}
  if(!(s>=0&&s<N)){s=0;}
  sel(s);
